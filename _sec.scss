@@ -1,0 +1,1041 @@
+@import "color";
+@import "vaule";
+@import "basic";
+@import"fontname";
+// @import"mixin2";
+
+/* width */
+// .sfb{
+//     height: 100%;
+//     font-weight: 100%;
+// }
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    /* background: gray;  */
+    border-radius: 0px;
+    
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+    }
+
+.nav{
+    position: sticky;
+    top: 0px;
+    @include positionmax(100%, 56px);
+    background-color: white;
+    padding: 10px 0%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    // margin: 0 0 10px;
+}
+
+body{
+    margin: $none;
+    background-color: $backg7;
+    width: 100%;
+ }
+.first{
+    background-color: $backg6;
+    @include positionmax($weight, 40px);
+    display: flex;
+    justify-content: space-around;
+}
+.user{
+    text-align: center;
+    @include position(50px, 40px);
+}
+.user1{
+    text-align: center;
+    @include position(40px, 40px);
+}
+.pro{
+    font-size: 20px;
+    color: white;
+    margin: 7px 2px;
+}
+.search{
+    @include position(600px, 32px);
+    border-bottom: 1px solid $font-color4;
+    text-align: center;
+}
+.search1{
+    @include positionmax($weight, 10px);
+    margin: 0px 10px;
+}
+.mainsearch{
+    @include positionmax($weight, 20px);
+    margin: 0px;
+}
+
+.word{
+    @include font($name5, $size4,$weight1, $lineheight2 ,$font-color4)
+}
+.message0{
+    text-align: center;
+    @include position(50px, 50px);
+    margin:-5px 10px;
+    color: rgb(68,73,119);
+}
+.message{
+    text-align: center;
+    @include position(50px, 40px);
+}
+.message1{
+    text-align: center;
+    @include position(40px, 40px);
+}
+.mes{
+    @extend .pro;
+}
+.secnav{
+    max-width: $weight;
+    font-size: 20px;
+    color: black;
+    background-color:white;
+    display: flex;
+    justify-content: space-around;
+}
+.pro1{
+    font-size: 20px;
+    margin: 7px 2px;
+    color: rgb(125,131,138);
+}
+.post{
+    background-color: white;
+    @include positionmax($weight, 60px);
+    margin-top: 5px;
+    padding: 0px 10px;
+    // justify-content: center;
+}
+.conpost{
+    max-width: $weight;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.mydp{
+    border-radius: 50%;
+    @include position(40px, 40px);
+}
+.bar{
+   width: 100%;
+   border: 1px solid rgb(185, 179, 179);
+   border-radius: 80px ;
+
+   &:focus{
+    border:none;
+    outline: none !important;
+}
+} 
+input{
+    outline: none !important;
+    border: none;
+    max-width: 500px;
+    padding: 7px 18px;
+    &:focus{
+        border:none;
+        outline: none !important;
+    }
+}
+
+.form{
+    border:none;
+    background-color: transparent;
+    outline: none !important;
+    width: 100%;
+
+
+    &:focus{
+        border:none;
+        outline: none !important;
+   }
+   &::placeholder{
+        @include font($name5,$size4 ,$weight1 , $lineheight5,black )
+   }
+}
+.story{
+    @include positionmax($weight, 200px);
+    padding: 0 0 0 8px;
+    background-color: white;
+    margin: 10px 0 0;
+}
+.upperstory{
+    @include positionmax($weight, 34px);
+    padding: 8px 5px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.textstory0{
+    @include font($name6,$size4 ,$weight1 , $lineheight5,black );
+    margin: -5px 0px 0px;
+}
+.textstory{
+    @include font($name6,$size4 ,$weight2 , $lineheight5,black );
+    height: 18px;
+}
+.textstory2{
+    height: 18px;
+    @include font($name6,$size4 ,$weight1 , $lineheight5,$font-color8 );
+}
+.pro2{
+    font-size: 12px;
+    color: $font-color8;
+    // margin: 7px 2px;
+}
+.mainstory{
+    border-color: transparent;
+    display: flex;
+    flex-direction: row;
+    margin: 0 -2px -8px -2px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    white-space: nowrap;
+}
+.mystory{
+    @include position(90px, 160px);
+    margin: 0px 6px;
+    border-radius: 12px;
+}
+.sstory{
+    @extend .mystory;
+    margin: 0px;
+}
+.storytray{
+    @include positionmax($weight, 160px);
+}
+.otherstory{
+    height: 160px;
+    margin-right: 6px;
+    max-height: 277px;
+    max-width: 208px;
+    border-radius: 12px;
+    width: 90px;
+}
+.posted{
+    @include font($name6,$size4 ,$weight1 , $lineheight5,black );
+    @include positionmax($weight, 250px);
+    margin: 8px 0px;
+    background-color: white;
+}
+.firstdiv{
+    @include positionmax($weight, 40px);
+    padding: 10px 10px 0px;
+    display: flex;
+    margin-bottom: 12px;
+}
+.dp{
+    border-radius: 50%;
+    @include position(40px, 40px);
+    margin-right: 8px;
+}
+.besidepic{
+    @include position($weight, 30px);
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 0px ;
+}
+.fullname{
+    height: 40px
+}
+.name{
+    @include positionmax($weight, 17px);
+    @include font($name6,$size4 ,$weight2 , $lineheight6,$font-color5 );
+}
+.minutes{
+    @include positionmax($weight, 16px);
+}
+.maintime{
+    @include font($name6,$size5 ,$weight1 , $lineheight2 ,$font-color6 );
+}
+.time{
+    @include position(12px, 12px);
+    color:$font-color6 ;
+}
+.threedots{
+    @include position(40px, 40px);
+    padding: 5px;
+}
+.secdiv{
+    max-width:$weight;
+    min-width: 150px;
+    // @include positionmax(500px, 40px);
+    margin: 25px 0px;
+    padding: 0px 10px;
+    @include font($name6 ,$size4 ,$weight1 , $lineheight5 ,black );
+    text-size-adjust: 80%;
+
+}
+.reactions{
+    max-width: $weight;
+}
+.react{
+    display: flex;
+    margin: 10px 10px 5px;
+    @include font($name2 ,$size4 ,$weight1 , $lineheight2 ,$font-color8 );
+    justify-content: space-between;
+    @include positionmax($weight, 27px);
+    border-bottom: 1px solid rgba(231, 221, 221, 0.664);
+    
+}
+.mainreact{
+    height: 30px;
+}
+.comments{
+    height: 30px;
+}
+.belowreact{
+    @include positionmax($weight, 36px);
+    display: flex;
+    text-align: center;
+    margin: 10px 0px 0px;
+}
+.like{
+    @include position(600px, 36px);
+    padding: 0px 8px;
+}
+.commentdrop{
+    @extend .like
+}
+.share{
+    @extend .like
+}
+.like1{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.rrr{
+    font-size: 18px;
+}
+.like2{
+    @include font($name2 ,$size5 ,$weight2 , $lineheight1 ,$font-color8 );
+} 
+.container{
+    display: none;
+}
+.nav{
+    display: none;
+}
+.one{
+    display: none;
+}
+.secondpart{
+    display: none;
+}
+.cont{
+    display: none;
+}
+.thridpart{
+    display: none;
+}
+.see2{
+    display: none;
+}
+.middle{
+    display: none;
+}
+@media only screen and (max-width: 1200px) and (min-width: 992px){
+    .three{
+        display: none;
+    }
+    // .secondpart{
+    //     display: block;
+    // }
+    .container{
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+    .one{
+        display: none;
+    }
+    .secondpart{
+        display: none;
+    }
+    .cont{
+        display: none;
+    }
+    .thridpart{
+        display: none;
+    }
+    .see2{
+        display: none;
+    }
+    .middle{
+        display: none;
+    }
+    .secondpart{
+        margin: 5px 0px ;
+        @include positionmax(400px, 62%);
+        @include scroll(hidden, scroll);
+        display: block;
+    }
+    .sfb{
+        display: none;
+    }
+    .two{
+        position: absolute;
+        height: 1200px;
+        position: fixed;
+        right: 200px;
+    }
+}
+@media only screen and (min-width:992px){
+    .nav{
+        position: sticky;
+        top: 0px;
+        @include positionmax(100%, 56px);
+        background-color: white;
+        padding: 10px 0%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+    .secondpart{
+        display: none;   
+   }
+    .sfb{
+        display: none;
+    }
+    .one{
+        display: block;
+    }
+
+    body{
+        background-color: $backg;
+    }
+    .logo{
+        @include position(110px, 56px);
+        display: flex;
+        justify-content: space-around;
+    }
+    .fbl {
+        @include position(40px, 40px);
+    }
+    .see{
+        @include position(40px, 40px);
+        border-radius: 50%;
+        background-color: $backg8;
+        // box-sizing: border-box;
+    }
+    .icon{
+        @include position(17px, 17px);
+        @include icon(relative, 10px, 10px, 12px, $font-color9,20px);
+    }
+    .options{
+        @extend .logo;
+        @include position(204px, 56px);
+    }
+    .icon1{
+        @include icon(relative, 10px, 12px, 12px, $font-color10, 20px);
+    }
+    .icon2{
+        @include icon(relative, 10px, 10px, 12px, $font-color10, 20px);
+    }
+    .icon3{
+        @include icon(relative, 10px, 12px, 12px, $font-color10, 20px);
+    }
+    .icon4{
+        @include icon(relative, 10px, 14px, 12px, $font-color10, 20px);
+    }
+    .mainstory{
+        border-color: transparent;
+        margin: 25px -2px -8px -2px;
+        padding-bottom: 8px;
+        @include scroll(hidden, hidden)
+    }
+    .mystory{
+        @include position(90px, 160px);
+        margin: 0px 6px;
+        border-radius: 12px;
+    }
+    .sstory{
+        @extend .mystory;
+        margin: 0px;
+    }
+    .storytray{
+        @include positionmax($weight, 160px);
+    }
+    .otherstory{
+        display: flex;
+        height: 160px;
+        margin-right: 6px;
+        max-height: 277px;
+        max-width: 208px;
+        border-radius: 12px;
+        width: 105px;
+        display: flex;
+    }
+    .feeling{
+        @include positionmax($weight, 110px);
+        padding: 12px 16px 10px;
+        margin: 25px 0px 16px;
+        background-color: white;
+    }
+    .pic{
+        @include positionmax($weight, 40px);
+        display: flex;
+    }
+    .mydp{
+        border-radius: 50%;
+        @include position(40px, 40px);
+    }
+    .bar{
+        width: 100%;
+    }
+    .myinput{
+        width: 100%;
+        // @include positionmax($weight, 24px);
+        background-color: rgb(228,230,233);
+        border-radius: 50px;
+        padding: 8px 12px;
+    }
+    .input{
+        @include position(100%, 24px);
+        background-color: transparent;
+        outline: none;
+        border: none;
+    
+    //     &::placeholder{
+    //         @include font($name5,$size4 ,$weight1 , $lineheight5,black )
+    //    }
+    }
+    .mainfeel{
+        margin-top: 12px;
+        padding-top: 8px;
+        border-top: 1px solid $backg8;
+        @include positionmax($weight, 40px);
+        display: flex;
+        justify-content: space-between;
+        @include font($name7,$size7 ,$weight4 , $lineheight8,$font-color11 )
+    }
+    .lvid{
+        @include position(164px, 40px);
+        padding: 8px;
+        text-align: center;
+    
+        &:hover{
+            background-color:rgb(228, 227, 227);
+            border-radius: 8px;
+        }
+    }
+    .vid{
+        @include position(24px, 24px);
+        color: rgb(245,112,133);
+        margin-right: 5px;
+        font-size: 20px;
+    }
+    .vidchat{
+        @include positionmax($weight, 100px);
+        margin-bottom: 16px;
+        background-color: white;
+    }
+    .mainvidchat{
+        @include positionmax($weight, 32px);
+        margin: -4px;
+        padding: 12px 16px 0px;
+    }
+    .video{
+        @include position(32px, 32px);
+        padding: 4px;
+        text-align: center;
+    }
+    .vid1{
+        color: $font-color12;
+        font-size: 20px;
+    }
+    .room{
+        @include position(46px, 20px);
+        @include font($name7,$size7 ,$weight4 , $lineheight8,$font-color10 );
+        padding: 4px;
+    }
+    .room1{
+        @include position(46px, 20px);
+        @include font($name7,$size7 ,$weight1 , $lineheight8,$font-color13 );
+        // padding: 4px;
+    }
+    .mainvidpic{
+        @include positionmax($weight, 56px);
+        margin: -8px 0px;
+        padding: 8px 0px;
+    }
+    .vidpic{
+        @include positionmax($weight, 40px);
+        margin: 7px 0px ;
+        padding: 8px 0px;
+        
+    }
+    .pic1{
+        @include position(48px, 40px);
+        margin-right: 8px;
+       
+    }
+    .pic0{
+         display: flex;
+        @include scroll(visible,hidden);
+        justify-content: space-between;
+    }
+    .vpic{
+        @include position(40px, 40px);
+        border-radius: 50%;
+    }
+    .posted{
+        @include font($name6,$size4 ,$weight1 , $lineheight5,black );
+        // @include positionmax($weight, 250px);
+        max-width: $weight;
+        max-height: 250px;
+        min-height: 200px ;
+        margin: 8px 0px;
+        background-color: white;
+    }
+    .firstdiv{
+        @include positionmax($weight, 40px);
+        padding: 10px 10px 0px;
+        display: flex;
+        margin-bottom: 12px;
+    }
+    .dp{
+        border-radius: 50%;
+        @include position(40px, 40px);
+        margin-right: 8px;
+    }
+    .besidepic{
+        @include position($weight, 30px);
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px 0px ;
+    }
+    .fullname{
+        height: 40px
+    }
+    .name{
+        @include positionmax($weight, 17px);
+        @include font($name6,$size4 ,$weight2 , $lineheight6,$font-color5 );
+    }
+    .minutes{
+        @include positionmax($weight, 16px);
+    }
+    .maintime{
+        @include font($name6,$size5 ,$weight1 , $lineheight2 ,$font-color6 );
+    }
+    .time{
+        @include position(12px, 12px);
+        color:$font-color6 ;
+    }
+    .threedots{
+        @include position(40px, 40px);
+        padding: 5px;
+    }
+    .secdiv{
+        max-width:$weight;
+        min-width: 150px;
+        // @include positionmax(500px, 40px);
+        margin: 25px 0px;
+        padding: 0px 10px;
+        @include font($name6 ,$size4 ,$weight1 , $lineheight5 ,black );
+        text-size-adjust: 80%;
+    
+    }
+    .reactions{
+        max-width: $weight;
+    }
+    .react{
+        display: flex;
+        margin: 10px 10px 5px;
+        @include font($name2 ,$size4 ,$weight1 , $lineheight2 ,$font-color8 );
+        justify-content: space-between;
+        @include positionmax($weight, 27px);
+        border-bottom: 1px solid rgba(231, 221, 221, 0.664);
+        
+    }
+    .mainreact{
+        height: 30px;
+    }
+    .comments{
+        height: 30px;
+    }
+    .belowreact{
+        @include positionmax($weight, 36px);
+        display: flex;
+        text-align: center;
+        margin: 10px 0px 0px;
+    }
+    .like{
+        @include position(600px, 36px);
+        padding: 0px 8px;
+    }
+    .commentdrop{
+        @extend .like
+    }
+    .share{
+        @extend .like
+    }
+    .like1{
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    .rrr{
+        font-size: 18px;
+    }
+    .like2{
+        @include font($name2 ,$size5 ,$weight2 , $lineheight1 ,$font-color8 );
+    } 
+    .wstory{
+        @include icon(absolute,125px, 19px, 10px,black,5px);
+        background-color: white;
+        border-radius: 0px 0px 8px 8px;
+        @include position(90px, 60px);
+    }
+    .wstory1{
+        @include icon(absolute,105px, 45px, 10px,black,5px);
+        background-color:white;
+        border-radius: 50%;
+        @include position(40px, 40px);
+    }
+    .wstory2{
+        @include icon(absolute,110px, 50px, 10px,black,5px);
+        background-color:blue;
+        border-radius: 50%;
+        @include position(30px, 30px);
+    }
+    .plus{
+        @include icon(absolute,8px, 8px, 10px,white,15px);
+        @include position(15px, 10px);
+    }
+    .spic{
+        @include position(40px, 40px);
+        @include icon(absolute,30px, 130px, 10px,black,40px);
+        border-radius:50%;
+        border: 3px solid blue;
+    
+    }
+    .spic1{
+        @include position(40px, 40px);
+        @include icon(absolute,30px, 240px, 10px,black,40px);
+        border-radius:50%;
+        border: 3px solid blue;
+    
+    }
+    .sbname0{
+        @include position(60px, 40px);
+        @include icon(absolute,145px, 35px, 10px,white,5px);
+        @include font($name7,$size7 ,$weight1 , $lineheight6 ,black);
+        // letter-spacing: 1px;
+        // display: flex;
+    }
+    .sbname{
+        @include position(60px, 40px);
+        @include icon(absolute,140px, 240px, 10px,white,5px);
+        @include font($name7,$size7 ,$weight4 , $lineheight6 ,white);
+        letter-spacing: 1px;
+        // display: flex;
+    }
+    .sbname1{
+        @include position(60px, 40px);
+        @include icon(absolute,140px, 130px, 10px,white,5px);
+        @include font($name7,$size7 ,$weight4 , $lineheight6 ,white);
+        letter-spacing: 1px;
+        // display: flex;
+    }
+    .sbname2{
+        @include position(60px, 40px);
+        @include icon(absolute,140px, 350px, 10px,white,5px);
+        @include font($name7,$size7 ,$weight4 , $lineheight6 ,white);
+        letter-spacing: 1px;
+        // display: flex;
+    }
+    .sbname3{
+        @include position(60px, 40px);
+        @include icon(absolute,140px, 460px, 10px,white,5px);
+        @include font($name7,$size7 ,$weight4 , $lineheight6 ,white);
+        letter-spacing: 1px;
+        // display: flex;
+    }
+    .spic2{
+        @include position(40px, 40px);
+        @include icon(absolute,30px, 350px, 10px,black,40px);
+        border-radius:50%;
+        border: 3px solid blue;
+    
+    }
+    .spic3{
+        @include position(40px, 40px);
+        @include icon(absolute,30px, 460px, 10px,black,40px);
+        border-radius:50%;
+        border: 3px solid blue;
+    
+    }
+    .secondpart{
+        margin: 5px 0px ;
+        @include positionmax(400px, 62%);
+        @include scroll(hidden, scroll);
+        display: block;
+        
+    }
+    #hii{
+        display: none;
+    }
+    .fbl {
+        @include position(40px, 40px);
+        margin:0px 15px;
+    }
+    .see2{
+        @include position(400px,40px);
+        // margin-left: 15px;
+        display: block;
+    }
+    .see21{
+        @include position(250px,40px);
+        display: flex;
+        // justify-content: space-between;
+        background-color: rgb(228,230,233);
+        border-radius: 50px;
+        // background-color: blue;
+        // padding: 9px 16px 5px ;
+    }
+    .logo{
+        @include position(400px, 56px);
+        display: flex;
+        // justify-content: space-around;
+    }
+    #logo1{
+        @include position(200px, 56px);
+
+    }
+    #sea{
+        @include position(250px,24px);
+    }
+    .middle{
+        position: relative;
+        right: 70px;
+        // background-color: red;
+        @include position(400px, 39px);
+        // justify-content: space-between;
+    }
+    .geng{
+        @include position(400px, 39px);
+        display: flex;
+    }
+    .hey{
+        border-bottom: 3px solid rgb(24,119,242);
+    }
+    .geng1{
+        @include position(100px, 39px);
+        // margin:auto;
+        color: rgb(96, 98, 102, );
+        // background-color: blue;
+        // padding: 10px;
+
+        &:hover{
+            background-color: rgb(242,242,242);
+            border-radius: 5px;
+        }
+    }
+    .vid2{
+        @include position(24px, 24px);
+        // margin-right: 5px;
+        @include icon(relative, 5px, 30px, 50px,rgba(96,98,102,0.568) , 20px);
+        font-size: 30px;
+        text-align: center;
+    }
+    .myinput{
+        width: 100%;
+        // background-color: rgb(228,230,233);
+        // border-radius: 50px;
+        margin-left: 10px;
+        padding: 8px 12px;
+    }
+    .spons{
+        @include positionmax(600px,50px);
+    }
+    .spons1{
+        padding: 20px 4px;
+        @include positionmax(600px,12px);
+
+    }
+    .wordspon{
+        padding: 0px 16px;
+        @include positionmax(400px,12px);
+        @include font($name7 ,$size2 ,$weight4 , $lineheight8 ,$font-color13 );
+        // border-bottom: 1px solid $font-color13;
+        
+    }
+    .wish{
+        @include position(230px,230px);
+        // background-color: rgb(47, 112, 27);
+        padding: 8px 0px;
+        display: block;
+    }
+    .wish1{
+        margin: 0 8px;
+        @include position(230px,99px);
+        padding: 8px;
+        display: flex;
+        // justify-content: ;
+    }
+    .picwish{
+        @include position(100px,100px);
+        border-radius: 10px;
+        // background-color: pink;
+
+    }
+    .textwish{
+        justify-content: center;
+        padding: 20px 5px;
+    }
+    .cont{
+        @include positionmax(600px, 100%);
+        margin: 0px 8px;
+    }
+    .cont0{
+        @include positionmax(600px, 13px);
+        padding: 20px 0px 4px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $font-color13 ;
+    }
+    .cont1{
+        @include font($name7 ,$size2 ,$weight4 , $lineheight8 ,$font-color13 );
+
+    }
+    .maincont{   
+        padding: 8px 0px;
+        @include positionmax(600px, 100%);
+        margin-top: 15px;
+
+    }
+    .single{
+        @include positionmax(600px, 52);
+        padding: 10px 8px;
+        display: flex;
+        // background-color: red;
+
+        &:hover{
+            background-color: $backg8;
+            border-radius: 10px;
+        }
+    }
+    .fbl1{
+        @include position(35px, 35px);
+        // padding: 8px 12px 8px 0px;
+        // box-sizing: border-box;
+        border-radius: 50%;
+    }
+    .singlename{
+        @include font($name7 ,$size2 ,$weight4 , $lineheight8 ,$font-color13 );
+        @include positionmax(360px, 36px);
+        padding: 12px 10px  ;
+    }
+    .two{
+        height: 1200px;
+        position: fixed;
+        left: 1000px;
+    }
+    .thridpart{
+        display: block;
+        position: fixed;
+        // @include scroll(hidden, scroll);
+        @include positionmax(300px, 840px);
+        left: 10px;
+        top: 82px;
+        // background-color: pink;
+    }
+    .profile{
+        margin-top: -1px;
+        @include position(300px, 52px);
+    }
+    .prof{
+        @include position(284px, 50px);
+        padding: 0px 8px ;
+        display: flex;
+        justify-content: center;
+
+        &:hover{
+            background-color: $backg8;
+            border-radius: 8px;
+        }
+    }
+    .pic2{
+        @include position(32px, 32px);
+        margin: 5px 12px 5px 0px;
+        border-radius: 50%;
+    }
+    .picname{
+        @include position(250px, 34px);
+        padding: 5px 0px;
+        margin: 8px 0px 15px;
+        @include font($name7 ,$size7 ,$weight3 , $lineheight8 ,$font-color10 );
+
+    }
+    .icon40{
+        @include icon(relative, 5px, 12px, 12px, $font-color10, 15px);
+    }
+    .me{
+        border-bottom: 1px solid $font-color13 ;
+        margin: 5px 10px;
+    }
+    .profile1{
+        @include position(300px, 30px);
+        // margin-top: -10px;
+        padding: 10px;
+    }
+    .prof1{
+        @include font($name7 ,$size7 ,$weight3 , $lineheight8 ,$font-color11 );
+    }
+    .pic3{
+        @include position(32px, 32px);
+        margin: 5px 12px 5px 0px;
+        border-radius: 5px;
+    }
+    .laslas{
+        @include font($name7 ,$size5 ,$weight1 , $lineheight2 ,$font-color11 );
+    }
+    .middle{
+        display: block;
+    }
+    .secondpart{
+        display: block;
+    }
+    .cont{
+        display: block;
+    }
+    .container{
+        display: BLOCK;
+    }
+    .nav{
+        display: flex;
+    }
+    .one{
+        display: block;
+    }
+    .secondpart{
+        display: block;
+    }
+    .cont{
+        display: block;
+    }
+    .thridpart{
+        display: block;
+    }
+    .see2{
+        display: block;
+    }
+    .middle{
+        display: block;
+    }
+}

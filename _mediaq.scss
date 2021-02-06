@@ -1,0 +1,297 @@
+@import "color";
+@import "vaule";
+@import "basic";
+@import"fontname";
+
+
+
+
+body{
+   margin: $none;
+}
+main{
+    margin-top: 0%;
+}
+
+.big{
+    background-color:$backg;
+    width: 100%;
+    height: 600px ;
+}
+.content{
+    background-color:$backg;
+    // width: 100%;
+    max-width: 980px;
+    height: 536px;
+    margin: auto;
+}
+.row{
+    max-width: 980px;
+    margin: auto;
+}
+.con1{
+    @include positionmax(548px, 266px);
+    max-width: 548px;
+    height: 100px;
+    // margin: 0% 5%;
+    margin: auto;
+    padding-right: 32px;
+}
+.con2{
+    @include positionmax(369px,496px) ;  
+    margin: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+}
+.logo{
+    @include positionmax(548px, 54px);
+    padding: 40px 0px 16px;
+    text-align: center;
+    // margin: auto;
+    // margin-left: 20%;
+}
+img{
+    @include positionmax(300px,106px );
+    margin: -28px;
+    // padding: 28px !important;
+    // margin-left: auto;
+
+}
+.logotext{
+    display: none;
+}
+.box{
+    @include positionmax(369px,456px );
+    text-align: center;
+}
+.box1{
+    @include positionmax(369px,311px );
+    margin-top: 20px;
+    padding: 10px 0px 40px;
+    background-color: $backg2;
+    border-radius: 10px;
+    box-shadow: 0 0 15px $backg3;
+    text-align: center;
+}
+// form{
+//     @include positionmax(auto,311px );
+//     // padding: 0px 0% 50%;
+//     margin: $none !important;
+// }
+.box2{
+    @include positionmax(330px,128px );
+    margin: auto;
+}
+.box3{
+    @include positionmax(330px,52px );
+    padding: 6px 0;
+}
+#email.number{
+    @include position(250px,50px);
+    border: 1px solid $backg3;
+    padding: 14px 16px;
+    border-radius: 8px;
+    // appearance: none;
+   &:focus{
+        border: 1px solid #1877F2;
+        box-shadow: 0px 0px 1px lightblue;
+        outline: none;
+   }
+   &::placeholder{
+        @include font($name2,$size2 ,$weight1 , $lineheight2,$font-color2 )
+   }
+}
+input#pass.number{
+    @extend input,#email,.number;
+}
+
+// .login{
+//     @include position(300px,48px );
+//     margin:auto;
+//     border-radius: 8px;
+// }
+.btn{
+    @include position(268px,48px );
+    background-color:$btn-color ;
+    border-radius: 5px;
+    border: none;
+    @include font($name2,$size3 ,$weight2 , $lineheight3,$white )
+}
+.forget{   
+    @include positionmax(369px,18px );
+    margin: 16px 0 0;
+}
+a{
+    @include font($name2,$size4 ,$weight3 , $lineheight4,$font-color3 );
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.line{
+    @include positionmax(332px,0px );
+    margin: 20px 16px;
+    border-bottom: 1px solid $backg4;
+}
+// .new{
+//     @include positionmax(300px,48px );
+//     padding-top: 6px;
+
+// }
+#btn2{
+    @include positionmax(200px,48px );
+    background-color:$backg5 ;
+    border-radius: 8px;
+    border: none;
+    padding: 0 8px;
+    @include font($name2 , 17px, bold, $lineheight2 ,$white)
+}
+.cele{
+    @include font($name4 , $size4, $weight1, $lineheight4 ,$font-color);
+    @include positionmax(369px,18px );
+    margin-top: 28px;
+}
+.page{
+    @include font($name3 , $size4,$weight4, $lineheight4 ,$font-color)
+}
+@media ( min-width: 768px){
+    .big{
+        background-color:$backg;
+        width: 100%;
+        height: 600px;
+        padding: 72px 0px 112px;
+    }
+    .content{ 
+        background-color:$backg;
+        height: 496px ;
+        margin: 0% auto;
+        max-width: 980px;
+    }
+    .row{
+        // max-width: 980px;
+        width: 100%;
+        // height: 46px;
+        display: flex;
+    }
+    .con1{
+        @include positionmax(548px, 266px);
+        padding-right: 32px;
+        margin: 0%;
+    } 
+    .con2{
+        @include positionmax(369px,496px) ;  
+        margin: 0% 0%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    }
+    img{
+        @include position(300px,106px );
+        margin: -28px;
+    }
+    .logo{
+        @include positionmax(548px, 54px);
+        padding: 112px 0px 80px;
+        text-align: left;
+        margin-left: 0px;
+    }
+    .logotext{
+        display: block;
+        @include positionmax(500px,84px);
+        margin: $none;
+        @include font($name1,$size1,$weight1,$lineheight1, $font-color)
+    }
+    .box{
+        @include positionmax(369px,456px );
+        text-align: center;
+    }
+    .box1{
+        @include positionmax(369px,311px );
+        margin-top: 40px;
+        padding: 10px 0px 40px;
+        background-color: $backg2;
+        border-radius: 10px;
+        box-shadow: 0 0 15px $backg3;
+    }
+    // form{
+    //     display: block;
+    //     @include position(369px,311px )
+    // }
+    .box2{
+        @include positionmax(369px,128px);
+        margin: auto;
+    }
+    .box3{
+        @include positionmax(364px,52px );
+        padding: 6px 0;
+    }
+    input#email.number{
+        @include position(300px,50px);
+        border: 1px solid $backg3;
+        padding: 14px 16px;
+        border-radius: 8px;
+        appearance: none;
+       &:focus{
+            border: 1px solid #1877F2;
+            box-shadow: 0px 0px 1px lightblue;
+            outline: none;
+       }
+       &::placeholder{
+            @include font($name2,$size2 ,$weight1 , $lineheight2,$font-color2 )
+       }
+    }
+    input#pass.number{
+        @extend input,#email,.number;
+    }
+    
+    .login{
+        @include positionmax(330px,48px );
+        margin: auto;
+        border-radius: 8px;
+    }
+    .new{
+        @include position(369px,48px );
+        padding-top: 6px;
+    
+    }
+    .btn{
+        @include position(320px,48px );
+        background-color:$btn-color ;
+        border-radius: 5px;
+        border: none;
+        @include font($name2,$size3 ,$weight2 , $lineheight3,$white )
+    }
+ 
+  .forget{
+    @include positionmax(369px,18px );
+    margin: 16px 0 0;
+}
+a{
+    @include font($name2,$size4 ,$weight3 , $lineheight4,$font-color3 );
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.line{
+    @include positionmax(332px,0px );
+    margin: 20px 16px;
+    border-bottom: 1px solid $backg4;
+}
+// .new{
+//     @include position(300px,48px );
+//     padding-top: 6px;
+// }
+#btn2{
+    @include positionmax(200px,48px );
+    background-color:$backg5 ;
+    border-radius: 8px;
+    border: none;
+    padding: 0 8px;
+    @include font($name2 , 17px, bold, $lineheight2 ,$white)
+}
+.cele{
+    @include font($name4 , $size4, $weight1, $lineheight4 ,$font-color);
+    @include positionmax(369px,18px );
+    margin-top: 28px;
+}
+.page{
+    @include font($name3 , $size4,$weight4, $lineheight4 ,$font-color)
+}
+
+}

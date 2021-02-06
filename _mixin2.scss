@@ -1,0 +1,286 @@
+@import "color";
+@import "vaule";
+@import"fontname";
+@import "basic";   
+
+body{
+    margin: $none;
+    background-color: $backg7;
+    width: 100%;
+ }
+.first{
+    background-color: $backg6;
+    @include positionmax($weight, 40px);
+    display: flex;
+    justify-content: space-around;
+}
+.user{
+    text-align: center;
+    @include position(50px, 40px);
+}
+.user1{
+    text-align: center;
+    @include position(40px, 40px);
+}
+.pro{
+    font-size: 20px;
+    color: white;
+    margin: 7px 2px;
+}
+.search{
+    @include position(600px, 32px);
+    border-bottom: 1px solid $font-color4;
+    text-align: center;
+}
+.search1{
+    @include positionmax($weight, 10px);
+    margin: 0px 10px;
+}
+.mainsearch{
+    @include positionmax($weight, 20px);
+    margin: 0px;
+}
+
+.word{
+    @include font($name5, $size4,$weight1, $lineheight2 ,$font-color4)
+}
+.message0{
+    text-align: center;
+    @include position(50px, 50px);
+    margin:-5px 10px;
+    color: rgb(68,73,119);
+}
+.message{
+    text-align: center;
+    @include position(50px, 40px);
+}
+.message1{
+    text-align: center;
+    @include position(40px, 40px);
+}
+.mes{
+    @extend .pro;
+}
+.secnav{
+    max-width: $weight;
+    font-size: 20px;
+    color: black;
+    background-color:white;
+    display: flex;
+    justify-content: space-around;
+}
+.pro1{
+    font-size: 20px;
+    margin: 7px 2px;
+    color: rgb(125,131,138);
+}
+.post{
+    background-color: white;
+    @include positionmax($weight, 60px);
+    margin-top: 5px;
+    padding: 0px 10px;
+    // justify-content: center;
+}
+.conpost{
+    max-width: $weight;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.mydp{
+    border-radius: 50%;
+    @include position(40px, 40px);
+}
+.bar{
+   width: 100%;
+   border: 1px solid rgb(185, 179, 179);
+   border-radius: 80px ;
+
+   &:focus{
+    border:none;
+    outline: none !important;
+}
+} 
+input{
+    outline: none !important;
+    border: none;
+    max-width: 500px;
+    padding: 7px 18px;
+    &:focus{
+        border:none;
+        outline: none !important;
+    }
+}
+
+.form{
+    border:none;
+    background-color: transparent;
+    outline: none !important;
+    width: 100%;
+
+
+    &:focus{
+        border:none;
+        outline: none !important;
+   }
+   &::placeholder{
+        @include font($name5,$size4 ,$weight1 , $lineheight5,black )
+   }
+}
+.story{
+    @include positionmax($weight, 200px);
+    padding: 0 0 0 8px;
+    background-color: white;
+    margin: 10px 0 0;
+}
+.upperstory{
+    @include positionmax($weight, 34px);
+    padding: 8px 5px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.textstory0{
+    @include font($name6,$size4 ,$weight1 , $lineheight5,black );
+    margin: -5px 0px 0px;
+}
+.textstory{
+    @include font($name6,$size4 ,$weight2 , $lineheight5,black );
+    height: 18px;
+}
+.textstory2{
+    height: 18px;
+    @include font($name6,$size4 ,$weight1 , $lineheight5,$font-color8 );
+}
+.pro2{
+    font-size: 12px;
+    color: $font-color8;
+    // margin: 7px 2px;
+}
+.mainstory{
+    border-color: transparent;
+    display: flex;
+    flex-direction: row;
+    margin: 0 -2px -8px -2px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    white-space: nowrap;
+}
+.mystory{
+    @include position(90px, 160px);
+    margin: 0px 6px;
+    border-radius: 12px;
+}
+.sstory{
+    @extend .mystory;
+    margin: 0px;
+}
+.storytray{
+    @include positionmax($weight, 160px);
+}
+.otherstory{
+    height: 160px;
+    margin-right: 6px;
+    max-height: 277px;
+    max-width: 208px;
+    border-radius: 12px;
+    width: 90px;
+}
+.posted{
+    @include font($name6,$size4 ,$weight1 , $lineheight5,black );
+    @include positionmax($weight, 250px);
+    margin: 8px 0px;
+    background-color: white;
+}
+.firstdiv{
+    @include positionmax($weight, 40px);
+    padding: 10px 10px 0px;
+    display: flex;
+    margin-bottom: 12px;
+}
+.dp{
+    border-radius: 50%;
+    @include position(40px, 40px);
+    margin-right: 8px;
+}
+.besidepic{
+    @include position($weight, 30px);
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 0px ;
+}
+.fullname{
+    height: 40px
+}
+.name{
+    @include positionmax($weight, 17px);
+    @include font($name6,$size4 ,$weight2 , $lineheight6,$font-color5 );
+}
+.minutes{
+    @include positionmax($weight, 16px);
+}
+.maintime{
+    @include font($name6,$size5 ,$weight1 , $lineheight2 ,$font-color6 );
+}
+.time{
+    @include position(12px, 12px);
+    color:$font-color6 ;
+}
+.threedots{
+    @include position(40px, 40px);
+    padding: 5px;
+}
+.secdiv{
+    max-width:$weight;
+    min-width: 150px;
+    // @include positionmax(500px, 40px);
+    margin: 25px 0px;
+    padding: 0px 10px;
+    @include font($name6 ,$size4 ,$weight1 , $lineheight5 ,black );
+    text-size-adjust: 80%;
+
+}
+.reactions{
+    max-width: $weight;
+}
+.react{
+    display: flex;
+    margin: 10px 10px 5px;
+    @include font($name2 ,$size4 ,$weight1 , $lineheight2 ,$font-color8 );
+    justify-content: space-between;
+    @include positionmax($weight, 27px);
+    border-bottom: 1px solid rgba(231, 221, 221, 0.664);
+    
+}
+.mainreact{
+    height: 30px;
+}
+.comments{
+    height: 30px;
+}
+.belowreact{
+    @include positionmax($weight, 36px);
+    display: flex;
+    text-align: center;
+    margin: 10px 0px 0px;
+}
+.like{
+    @include position(600px, 36px);
+    padding: 0px 8px;
+}
+.commentdrop{
+    @extend .like
+}
+.share{
+    @extend .like
+}
+.like1{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.rrr{
+    font-size: 18px;
+}
+.like2{
+    @include font($name2 ,$size5 ,$weight2 , $lineheight1 ,$font-color8 );
+} 

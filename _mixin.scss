@@ -1,0 +1,138 @@
+@import "color";
+@import "basic";
+@import "vaule";
+@import"fontname";
+
+
+body{
+   margin: $none;
+}
+.big{
+    background-color:$backg;
+    width: 1526px;
+    height:536px ;
+    padding: 72px 0px 112px;
+}
+.content{
+    background-color:$backg;
+    max-width: 100%;
+    // max-width: 980px;
+    height: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+    display: flex;
+}
+.con1{
+    @include position(548px, 266px);
+    padding-right: 32px;
+}
+.con2{
+    @include position(369px,496px) ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+}
+.logo{
+    @include position(548px, 54px);
+    padding: 112px 0px 16px;
+}
+img{
+    @include position(300px,106px );
+    margin: -28px;
+}
+.logotext{
+    @include position(500px,84px );
+    margin: $none;
+    @include font($name1,$size1,$weight1,$lineheight1, $font-color)
+}
+.box{
+    @include position(369px,456px );
+    text-align: center;
+
+}
+.box1{
+    @include position(369px,311px );
+    margin-top: 40px;
+    padding: 10px 0px 40px;
+    background-color: $backg2;
+    border-radius: 10px;
+    box-shadow: 0 0 15px $backg3;
+    text-align: center;
+
+}
+form{
+    @include position(369px,311px )
+}
+.box2{
+    @include position(369px,128px )
+}
+.box3{
+    @include position(364px,52px );
+    padding: 6px 0;
+}
+input#email.number{
+    @include position(300px,50px );
+    border: 1px solid $backg3;
+    padding: 14px 16px;
+    border-radius: 8px;
+    appearance: none;
+   &:focus{
+        border: 1px solid #1877F2;
+        box-shadow: 0px 0px 1px lightblue;
+        outline: none;
+   }
+   &::placeholder{
+        @include font($name2,$size2 ,$weight1 , $lineheight2,$font-color2 )
+   }
+}
+input#pass.number{
+    @extend input,#email,.number;
+}
+
+.login{
+    @include position(300px,48px );
+    padding: 0 16px;
+    border-radius: 8px;
+}
+.btn{
+    @include position(330px,48px );
+    background-color:$btn-color ;
+    border-radius: 5px;
+    border: none;
+    @include font($name2,$size3 ,$weight2 , $lineheight3,$white )
+}
+.forget{
+    @include position(369px,18px );
+    margin: 16px 0 0;
+}
+a{
+    @include font($name2,$size4 ,$weight3 , $lineheight4,$font-color3 );
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.line{
+    @include position(332px,0px );
+    margin: 20px 16px;
+    border-bottom: 1px solid $backg4;
+}
+.new{
+    @include position(369px,48px );
+    padding-top: 6px;
+
+}
+#btn2{
+    @include position(200px,48px );
+    background-color:$backg5 ;
+    border-radius: 8px;
+    border: none;
+    padding: 0 8px;
+    @include font($name2 , 17px, bold, $lineheight2 ,$white)
+}
+.cele{
+    @include font($name4 , $size4, $weight1, $lineheight4 ,$font-color);
+    @include position(369px,18px );
+    margin-top: 28px;
+}
+.page{
+    @include font($name3 , $size4,$weight4, $lineheight4 ,$font-color)
+}

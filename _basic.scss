@@ -1,0 +1,31 @@
+@mixin position ($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin positionmax ($width, $height) {
+    max-width: $width;
+    height: $height;
+}
+@mixin font ($name, $size, $weight, $linehei, $fontcol) {
+    font-family:$name ;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $linehei;                
+    color: $fontcol;
+}
+@mixin icon ($pos, $top, $left, $right, $color,$fsize) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    right: $right;
+    color: $color;
+    font-size: $fsize;
+}
+@mixin scroll($hidden,$scroll) {
+    display: flex;
+    flex-direction: row;
+    overflow-x:$hidden;
+    overflow-y: $scroll;
+    white-space: nowrap;
+}
+
